@@ -1,0 +1,6 @@
+./laravel/vendor
+./laravel/storage/*.key
+./laravel/storage/*.gitignore
+.env
+./laravel/.env
+.idea
