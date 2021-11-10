@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Api\ChatController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\WebhookController;
+use App\Http\Controllers\Api\WebhookVerifyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::match(['get', 'post'], '/botman', ChatController::class);
+Route::get('/webhook', WebhookVerifyController::class);
+Route::post('/webhook', WebhookController::class);
