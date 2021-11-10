@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Api\ChatController;
 use App\Http\Controllers\Api\WebhookController;
 use App\Http\Controllers\Api\WebhookVerifyController;
 use Illuminate\Support\Facades\Route;

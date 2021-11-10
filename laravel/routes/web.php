@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\ChatController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes(['register' => false]);
 
-Route::match(['get', 'post'], '/botman', ChatController::class);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
